@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using MauiBlazor.Data;
+﻿using MauiBlazor.Data;
+using Radzen;
 
 namespace MauiBlazor;
 
@@ -21,6 +21,7 @@ public static class MauiProgram
 #endif
 
 		builder.Services.AddSingleton<WeatherForecastService>();
+		builder.Services.AddScoped<TooltipService>();
 
 		return builder.Build();
 	}
